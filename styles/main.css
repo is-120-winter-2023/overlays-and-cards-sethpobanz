@@ -174,12 +174,13 @@ main ul {
 }
 
 .hero {
-  height: 100vh;
+  height: 103vh;
   position: relative;
 }
 .hero picture {
   height: 100%;
   object-fit: cover;
+  object-position: left center;
 }
 .hero .textwrapper {
   position: absolute;
