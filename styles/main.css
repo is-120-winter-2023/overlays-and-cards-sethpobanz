@@ -1,0 +1,219 @@
+/*****************************************************/
+/* This semester we will be using my variation of    */
+/* Josh Comeau's CSS Reset instead of normalize      */
+/* Read more at                                      */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+/*****************************************************/
+/* Always add your CSS below the reset CSS           */
+/*****************************************************/
+
+:root {
+  --color-font: #36393b;
+  --color-primary: #a5d8ff;
+  --color-secondary: #afd0d6;
+  --accent-one: #bfb6bb;
+  --accent-two: #c49799;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  /* this an experimental line-height; if it breaks, add line-height: 1.5 to body */
+  line-height: calc(2em + 0.5rem);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* until you get a feel for overflow, I'll keep these next two commented out */
+/* p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+} */
+
+/* p {
+  overflow-wrap: break-word;
+  hyphens: auto;
+} */
+
+/* temp CSS for HTML only assignments */
+picture img {
+  width: 100%;
+}
+
+svg {
+  width: 200px;
+}
+
+/* temp fix to size about img */
+img[srcset] {
+  width: 50%;
+  height: auto;
+  margin: 2rem auto;
+}
+
+/* temporary fix to size svg images */
+img[src$="svg"] {
+  width: 200px;
+}
+
+/************ add your CSS here *****************/
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  color: var(--color-font);
+  font-size: 2rem;
+}
+main {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 60rem;
+  text-align: center;
+}
+header {
+  display: inline-block;
+}
+footer {
+  padding: 1 2rem;
+  background-color: var(--color-secondary);
+  text-align: center;
+  margin: 0;
+}
+h1 {
+  color: var(--color-font);
+  font-family: "Anton", sans-serif;
+  font-size: 5rem;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+main h2 {
+  color: var(--color-font);
+  font-family: "Anton", sans-serif;
+  font-size: 4rem;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+main a {
+  color: var(--color-font);
+  font-family: "Anton", sans-serif;
+  font-size: 2rem;
+  text-decoration: none;
+}
+main a[href]:hover {
+  color: var(--accent-two);
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--accent-one);
+  color: var(--color-font);
+  transition: color 300ms ease;
+}
+a.button:hover {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+article,
+aside {
+  margin-bottom: 10rem;
+}
+main ul {
+  margin-top: 1rem;
+  list-style: none;
+}
+.hero h1 {
+  padding-top: 5rem;
+  font-size: clamp(2.5rem, 6vw, 8rem);
+  line-height: 1;
+  text-shadow: 3px 3px 4px black;
+}
+
+.hero h1,
+.hero p {
+  font-family: "Arvo", serif;
+  color: #ffe4c4;
+  margin: 0;
+  text-align: center;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+}
+.hero picture {
+  height: 100%;
+  object-fit: cover;
+}
+.hero .textwrapper {
+  position: absolute;
+  inset: 0;
+  background-color: rgb(0 0 0 / 30%);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(0 0 0 / 0%) 30%,
+    rgb(0 0 0 / 90%)
+  );
+}
+
+.cards {
+  display: flex;
+  gap: 1rem;
+  margin: 0 1rem;
+}
+.cards img {
+  width: 100%;
+  display: block;
+}
+.card {
+  transition: color 300ms, text-decoration 300ms;
+  flex: 1 1 0;
+  margin-bottom: 10rem;
+  text-decoration: none;
+  color: var(--color-font);
+}
+
+.card:hover {
+  color: var(--accent-two);
+}
